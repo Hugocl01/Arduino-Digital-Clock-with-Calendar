@@ -1,4 +1,4 @@
-# Reloj digital con calendario Arduino
+# Arduino Digital Clock with Calendar
 
 Clock with calendar 
 
@@ -23,3 +23,4 @@ The circuit:
 * wiper to LCD VO pin (pin 3)
 
 > http://www.arduino.cc/en/Tutorial/LiquidCrystal
+
