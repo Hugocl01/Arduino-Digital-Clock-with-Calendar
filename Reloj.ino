@@ -1,16 +1,13 @@
-//www.elegoo.com
-//2016.12.9
-
+// Clock with calendar 
 /*
-  LiquidCrystal Library - Hello World
+  LiquidCrystal Library
 
  Demonstrates the use a 16x2 LCD display.  The LiquidCrystal
  library works with all LCD displays that are compatible with the
  Hitachi HD44780 driver. There are many of them out there, and you
  can usually tell them by the 16-pin interface.
 
- This sketch prints "Hello World!" to the LCD
- and shows the time.
+ This sketch prints to the LCD the time and the date.
 
   The circuit:
  * LCD RS pin to digital pin 7
@@ -25,17 +22,6 @@
  * 10K resistor:
  * ends to +5V and ground
  * wiper to LCD VO pin (pin 3)
-
- Library originally added 18 Apr 2008
- by David A. Mellis
- library modified 5 Jul 2009
- by Limor Fried (http://www.ladyada.net)
- example added 9 Jul 2009
- by Tom Igoe
- modified 22 Nov 2010
- by Tom Igoe
-
- This example code is in the public domain.
 
  http://www.arduino.cc/en/Tutorial/LiquidCrystal
  */
@@ -57,7 +43,7 @@ int seg = 50;
 void setup() {
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
-  // Print a message to the LCD.
+  // Print a message to the LCD until its over delay().
   lcd.setCursor(0, 0);
   lcd.print("Reloj digital");
   lcd.setCursor(0, 1);
