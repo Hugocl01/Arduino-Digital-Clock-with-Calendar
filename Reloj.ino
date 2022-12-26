@@ -6,9 +6,9 @@
 // initialize the library with the numbers of the interface pins
 LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
 //Fecha
-int dia = 25;
-int mes = 12;
-int anio = 2022;
+int dia = 28;
+int mes = 2;
+int anio = 2020;
 //Reloj
 int hora = 23;
 int min = 59;
@@ -40,7 +40,7 @@ void loop() {
       if ((anio % 4 == 0 && anio % 100 != 0 || anio % 400 == 0) && dia > 29) {
         dia = 1;
         mes++;
-      } else {
+      } else if (dia > 28) {
         dia = 1;
         mes++;
       }
@@ -135,7 +135,7 @@ void loop() {
     hora = 0;
     dia++;
   }
-  if (min > 59) {
+  if (min == 59 && seg == 59) {
     min = 0;
     hora++;
   }
