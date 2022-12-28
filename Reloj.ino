@@ -14,6 +14,8 @@ int hora = 23;
 int min = 59;
 int seg = 50;
 
+String horas;
+
 void setup() {
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
@@ -135,12 +137,11 @@ void loop() {
     hora = 0;
     dia++;
   }
-  if (min == 59 && seg == 59) {
+  if (min > 59) {
     min = 0;
     hora++;
   }
   if (seg > 59) {
-    seg++;
     seg = 0;
     min++;
   }
@@ -165,5 +166,4 @@ void loop() {
   } else {
     lcd.print(seg);
   }
-  lcd.print(" ");
 }
